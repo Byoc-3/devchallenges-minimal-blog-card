@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Minimal Blog Card — devChallenges (matched to design spec)
+   Card width: 336px content + 16px padding each side = 368px total
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Reset — Box Model Blueprint
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background-color: #f7f7fc;
+  color: #4b4c53;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Page wrapper — centers the card
+   -------------------------------------------------------------------------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Card container — 368px total width per design spec
+   -------------------------------------------------------------------------- */
+
+.card {
+  width: 100%;
+  max-width: 368px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(23, 25, 45, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(23, 25, 45, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   Card image — 152px tall per design, full bleed width
+   -------------------------------------------------------------------------- */
+
+.card__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Card body — 16px padding per design
+   -------------------------------------------------------------------------- */
+
+.card__body {
+  padding: 16px;
+}
+
+.card__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #635fc7;
+  background-color: #ebeaf9;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #17192d;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: #71727a;
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Author line — 20px spacing above per design
+   -------------------------------------------------------------------------- */
+
+.card__author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #17192d;
+  border-top: 1px solid #eaeaf0;
+  padding-top: 16px;
+}
